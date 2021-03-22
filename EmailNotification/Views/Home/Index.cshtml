@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div id="notification" class="text-center" style="max-width:200px; align-content:center">
+    <h1 class="display-4">Welcome</h1>
+    <form id="userForm" action="/Home/SendNotification" method="post">
+        <input id="To" name="To" type="email" placeholder="To:" required />
+        <input id="Phone" name="Phone" type="number" placeholder="Phone:"  required/>
+        <input id="Subject" name="Subject" type="text" placeholder="Subject" required/>
+        <textarea id="PlainTextContent" name="PlainTextContent" required></textarea>
+        <input type="submit" value="Send Notification!" />
+    </form>
+   
+    <div>@ViewBag.Status</div>
+</div>
